@@ -1,0 +1,9 @@
+---
+import EmployeeCard from "./EmployeeCard.astro";
+
+const { data } = Astro.props;
+---
+
+<section>
+  {data.map((employee) => <EmployeeCard employee="{employee}" />)}
+</section>

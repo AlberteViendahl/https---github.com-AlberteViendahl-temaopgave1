@@ -1,0 +1,22 @@
+@layer reset, global, components, overrides;
+
+@import url("./reset.css") layer(reset);
+
+@layer global {
+html {
+    line-height: 1.5;
+
+    --overskift: #1C1C1C;
+    
+}
+
+h1 {
+color:var(--overskift); /* skal gøres til en variabel*/
+font-family: Cabin;
+font-size: 3.125rem;
+font-weight: 600;
+line-height: 1.3%; /* 65px */
+}
+
+
+}
