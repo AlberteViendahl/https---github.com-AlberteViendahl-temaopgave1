@@ -1,6 +1,7 @@
 @layer reset, global, components, overrides;
 
 @import url("./reset.css") layer(reset);
+@import url("./overrides.css") layer(overrides);
 
 @layer global {
 html {

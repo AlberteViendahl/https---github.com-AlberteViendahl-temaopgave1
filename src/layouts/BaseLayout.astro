@@ -1,5 +1,9 @@
 ---
-const { title = "AskEksperts" } = Astro.props;
+import Footer from "../componentes/Footer.astro";
+import Nav from "../componentes/Nav.astro";
+
+import "../styles/global.css";
+const { title = "" } = Astro.props;
 ---
 
 <html lang="en">
@@ -8,18 +12,13 @@ const { title = "AskEksperts" } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} - AskEksperts</title>
+    <title>{title} — AskExperts</title>
   </head>
   <body>
-    <header></header>
+    <Nav />
     <main>
       <slot />
     </main>
-    <footer></footer>
+    <!--     <Footer /> -->
   </body>
 </html>
-
-<style>
-  main {
-  }
-</style>

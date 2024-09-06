@@ -2,22 +2,19 @@
 import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import EmployeeSection from "../componentes/EmployeeSection.astro";
-import Footer from "../componentes/Footer.astro";
-import Nav from "../componentes/Nav.astro";
+import Popup from "../componentes/Popup.astro";
+import EmployeeCard from "../componentes/EmployeeCard.astro";
 
 /*import daisy from "../assets/images/det billede jeg evt har"*/
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/AlberteViendahl/frontend-design/main/resources/json/employees.json"
 ).then((res) => res.json());
+
+/* const firstThreeEmployees = employeeData.slice(0, 3); */
 ---
 
-<Nav />
 <BaseLayout title="Home">
-  <!--   <Image alt="" src={} /> -->
-  <!-- 
-  <EmployeeSection data="{employeeData}" /> -->
-
-  <BaseLayout title="Home" /></BaseLayout
->
-<Footer />
+  <!--   <EmployeeSection data={employeeData} theme="dark" /> -->
+  <Popup />
+</BaseLayout>

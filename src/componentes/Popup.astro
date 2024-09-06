@@ -1,0 +1,49 @@
+---
+import Button from "../componentes/Button.astro";
+---
+
+<button popovertarget="popup">Login </button>
+
+<div popover id="popup">
+  <h1>Dashboard Login</h1>
+  <label for="password"></label>
+  <input type="password" id="password" placeholder="Enter password" />
+  <p></p>
+
+  <label for="email"> </label>
+  <input type="email" id="email" placeholder="Enter email" />
+  <p></p>
+  <Button text="Go to dashboard" />
+</div>
+
+<style>
+  div {
+    background-color: var(--primary03);
+    border-radius: 20px;
+    padding: 60px;
+    min-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  input {
+    background-color: var(--secondary02);
+    border-radius: 20px;
+    padding: 12px 17px;
+    width: 316px;
+    margin: 15px;
+    color: var(--bodytext);
+  }
+
+  h1 {
+    font-size: var(--heading02);
+    color: var(--secondary02);
+    padding-top: 10px;
+    padding-bottom: 45px;
+  }
+</style>
+
+<!-- MANGLER: knappen skal styles og login skal sidde i nav + når man klikker login skal side blive sløret-->

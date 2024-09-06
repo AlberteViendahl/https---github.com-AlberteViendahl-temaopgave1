@@ -1,10 +1,49 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+import Button from "../componentes/Button.astro";
 
+const { employee } = Astro.props;
+const { img, name, title, description } = employee;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/images/*.{jpeg,jpg,png,gif}"
+);
+if (!images[img])
+  throw new Error(
+    `"${img}" does not exist in glob: "src/assets/images/*.{jpeg,jpg,png,gif}"`
+  );
 ---
 
-<li>
-  <article>
-    <h2></h2>
-    <p></p>
-  </article>
-</li>
+<article>
+  <Image src={images[img]()} alt={name} />
+  <h2>{name}</h2>
+  <h3>{title}</h3>
+  <p>{description}</p>
+</article>
+
+<style>
+  @layer components {
+    article {
+      color: var(--primary03);
+      background: var(--secondary02);
+    }
+  }
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    font-size: var(--heading05);
+    color: var(--primary03);
+  }
+
+  img {
+    border-radius: 20px;
+  }
+</style>
+
+<!-- MANGLER: h3 skal være en knap og sidde et andet sted
+ h2 skal være bold
+ icon mangler også -->
