@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+---
+
+<article>
+  <h1>AskExperts</h1>
+  <div class="hr"></div>
+  <p>
+    ©2022 Consultalk. All rights reserved | Terms of Service | Privacy Policy
+  </p>
+</article>
+
+<style>
+  article {
+    display: flex;
+    background-color: var(--primary03);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  p {
+    font-size: var(--footer);
+    color: var(--secondary02);
+    align-content: center;
+    padding-bottom: 46px;
+  }
+
+  h1 {
+    color: var(--secondary02);
+    font-size: var(--heading05);
+    align-content: center;
+    padding-top: 46px;
+  }
+
+  .hr {
+    width: 70%;
+    border-bottom: 1px solid #707070; /* Viser kun den nederste kant som en linje */
+    margin: 1rem 0;
+  }
+</style>
+
+<!--MANGLER: margin på hr er ikke rigtigt, når man kigger på hjemmesiden er der større mellemrum mellem hr og p end hr og h1 skal fixes -->

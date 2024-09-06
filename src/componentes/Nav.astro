@@ -1,0 +1,55 @@
+---
+import "../styles/global.css";
+import Button from "../componentes/Button.astro";
+---
+
+<article class="grid">
+  <h1>AskExperts</h1>
+  <ul>
+    <li>Home</li>
+    <li>Case Study</li>
+    <li>Team</li>
+    <li>About</li>
+  </ul>
+  <div class="knap">
+<Button text="Login"></Button>
+</div>
+</article>
+
+<style>
+    article{
+        background-color: var(--nav);
+    }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+  h1 { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    var(--heading05); 
+    color: var( --secondary02);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+li{
+    color: var( --secondary02);
+    text-decoration: none;
+}
+
+.knap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var( --primary03);
+}
+</style>

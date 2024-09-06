@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import EmployeeSection from "../componentes/EmployeeSection.astro";
+import Footer from "../componentes/Footer.astro";
+import Nav from "../componentes/Nav.astro";
 
 /*import daisy from "../assets/images/det billede jeg evt har"*/
 
@@ -10,10 +12,12 @@ const employeeData = await fetch(
 ).then((res) => res.json());
 ---
 
+<Nav />
 <BaseLayout title="Home">
-  <Image alt="" src={} />
-
-  <EmployeeSection data="{employeeData}" />
+  <!--   <Image alt="" src={} /> -->
+  <!-- 
+  <EmployeeSection data="{employeeData}" /> -->
 
   <BaseLayout title="Home" /></BaseLayout
 >
+<Footer />

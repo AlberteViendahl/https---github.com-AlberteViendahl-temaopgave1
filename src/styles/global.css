@@ -14,9 +14,16 @@ html {
     --primary03: #181818;
     --secondary01:#F5F5F5;
     --secondary02:#FFFFFF;
+    --nav: #1b1b1be8;
 
     /*skrift str*/
-
+    --heading01: 50px;
+    --heading02: 45px;
+    --heading03: 40px;
+    --heading04: 35px;
+    --heading05: 30px;
+    --heading06: 25px;
+    --footer: 16px
     
 }
 
