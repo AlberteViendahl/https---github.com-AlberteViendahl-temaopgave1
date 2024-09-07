@@ -16,10 +16,14 @@ if (!images[img])
 ---
 
 <article>
-  <Image src={images[img]()} alt={name} />
+  <div class="image-container">
+    <Image src={images[img]()} alt={name} />
+    <h3>{title}</h3>
+  </div>
   <h2>{name}</h2>
-  <h3>{title}</h3>
   <p>{description}</p>
+
+  <!--   <div class="icons"></div> -->
 </article>
 
 <style>
@@ -28,6 +32,11 @@ if (!images[img])
       color: var(--primary03);
       background: var(--secondary02);
     }
+  }
+
+  .image-container {
+    position: relative;
+    display: inline-block;
   }
 
   h2 {
@@ -39,11 +48,19 @@ if (!images[img])
     color: var(--primary03);
   }
 
+  h3 {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background: var(--primary03);
+    padding: 4px 21px;
+    z-index: 1;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+  }
+
   img {
     border-radius: 20px;
   }
 </style>
-
-<!-- MANGLER: h3 skal være en knap og sidde et andet sted
- h2 skal være bold
- icon mangler også -->
