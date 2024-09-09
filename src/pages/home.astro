@@ -5,6 +5,7 @@ import EmployeeSection from "../componentes/EmployeeSection.astro";
 import Popup from "../componentes/Popup.astro";
 import EmployeeCard from "../componentes/EmployeeCard.astro";
 import Newsletter from "../componentes/Newsletter.astro";
+import Top from "../componentes/Top.astro";
 
 /* import fællesbillede2 from "../assets/images/fællesbillede2.jpg"; */
 
@@ -15,6 +16,6 @@ const employeeData = await fetch(
 /* const firstThreeEmployees = employeeData.slice(0, 3); */
 ---
 
-<BaseLayout title="Home">
-  <!--   <EmployeeSection data={employeeData} theme="dark" /> -->
-</BaseLayout>
+<Top />
+
+<style></style>

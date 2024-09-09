@@ -13,8 +13,16 @@ const employeeData = await fetch(
 
 <BaseLayout title="Home">
   <div class="body">
-    <img src="/images/fællesbillede2.jpg" alt="">
-    <EmployeeSection data={employeeData} theme="dark" />
+    <img src="../billede2.jpg" alt="" />
+    <h1>Meet Our Great Team</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam,
+      quis nostrud exercitation.
+    </p>
+    <div class="card">
+      <EmployeeSection data={employeeData} theme="dark" />
+    </div>
   </div>
 </BaseLayout>
 
@@ -26,14 +34,32 @@ const employeeData = await fetch(
     gap: 1rlh;
   }
 
-  .card {
-    grid-column: content;
-  display: grid;
-  grid-template-columns: subgrid;
-  
+  img {
+    grid-column: full;
+    display: grid;
+    grid-template-columns: subgrid;
+
     > * {
-    grid-column: content
+      grid-column: full;
+    }
   }
-}
+  .card,
+  h1,
+  p {
+    grid-column: content;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    > * {
+      grid-column: content;
+    }
+  }
+
+  p {
+    max-width: 230px;
+  }
+
+  img {
+    max-height: 200px;
   }
 </style>
