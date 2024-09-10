@@ -1,0 +1,191 @@
+---
+import "../styles/global.css";
+---
+
+<body>
+  <section class="grid_1-1">
+    <div class="flexcolumn">
+      <h1>Experience</h1>
+      <h2>More than 25 years of experience</h2>
+      <p>3000+ our clients are insured around the World</p>
+    </div>
+    <div class="flex">
+      <div class="parent-wrapper">
+        <div
+          class="parent"
+          style="--percent: 85%; animation: pie1 10s linear infinite;"
+        >
+          <div class="child"></div>
+          <span class="percent-number">85%</span>
+        </div>
+        <p class="circle-text">Consistency</p>
+      </div>
+      <div class="parent-wrapper">
+        <div
+          class="parent"
+          style="--percent: 95%; animation: pie2 10s linear infinite;"
+        >
+          <div class="child"></div>
+          <span class="percent-number">95%</span>
+        </div>
+        <p class="circle-text">Improvement</p>
+      </div>
+      <div class="parent-wrapper">
+        <div
+          class="parent"
+          style="--percent: 90%; animation: pie3 10s linear infinite;"
+        >
+          <div class="child"></div>
+          <span class="percent-number">90%</span>
+        </div>
+        <p class="circle-text">Branching</p>
+      </div>
+    </div>
+  </section>
+</body>
+
+<style>
+  /*  @property --percent {
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 0%;
+  } */
+
+  .parent-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .parent {
+    --offset-pos: 5px;
+    border: var(--offset-pos) solid transparent;
+    background:
+      linear-gradient(#fbc336, #fbc336) padding-box,
+      conic-gradient(#fff var(--percent), #daae3c 0) border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato";
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--h1);
+
+    .child {
+      aspect-ratio: 1;
+      border-radius: 99px;
+      width: 30px;
+      background: var(--h1);
+      border: 5px solid #fff;
+      position: absolute;
+      offset-path: border-box;
+      offset-distance: var(--percent);
+      offset-anchor: 50% calc(50% - var(--offset-pos) / 2);
+    }
+  }
+  /* 
+  @keyframes pie1 {
+    0% {
+      --percent: 0%;
+    }
+    70% {
+      --percent: 85%;
+    }
+    100% {
+      --percent: 85%;
+    }
+  }
+
+  @keyframes pie2 {
+    0% {
+      --percent: 0%;
+    }
+    70% {
+      --percent: 95%;
+    }
+    100% {
+      --percent: 95%;
+    }
+  }
+
+  @keyframes pie3 {
+    0% {
+      --percent: 0%;
+    }
+    70% {
+      --percent: 90%;
+    }
+    100% {
+      --percent: 90%;
+    }
+  } */
+
+  .parent {
+    aspect-ratio: 1;
+    width: 150px;
+    border-radius: 1e5px;
+    margin-inline: auto;
+  }
+
+  .flex {
+    display: flex;
+    gap: 26px;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 89px;
+  }
+
+  section {
+    padding: 133px;
+    align-items: center;
+    background-color: #fbc336;
+  }
+
+  h1 {
+    color: var(--h1);
+    font-family: "Lato";
+    font-size: 16px;
+    letter-spacing: 2.32px;
+    text-transform: uppercase;
+    background-color: #fff;
+    border-radius: 20px;
+    width: fit-content;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  h2 {
+    color: var(--h1);
+    font-family: "Cabin";
+    font-size: 45px;
+    font-weight: 700;
+  }
+
+  p {
+    color: var(--h1);
+    font-family: "Lato";
+    font-size: 18px;
+  }
+
+  .flexcolumn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .circle-text {
+    margin: 25% 0% 0% 0%;
+    color: var(--h1);
+    font-family: "Cabin";
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.16%;
+  }
+</style>
+
+<!-- Mangler: skal bytte rundt i tingene -->

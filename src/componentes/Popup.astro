@@ -1,5 +1,6 @@
 ---
 import Button from "../componentes/Button.astro";
+import "../styles/global.css";
 ---
 
 <button popovertarget="popup">Login </button>
@@ -44,6 +45,16 @@ import Button from "../componentes/Button.astro";
     padding-top: 10px;
     padding-bottom: 45px;
   }
+  button {
+    background-color: var(--primary01);
+    border-radius: 20px;
+    line-height: 1.6;
+    gap: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
 </style>
 
-<!-- MANGLER: knappen skal styles og login skal sidde i nav + når man klikker login skal side blive sløret-->
+<!-- MANGLER: knappen skal styles + når man klikker login skal side blive sløret-->

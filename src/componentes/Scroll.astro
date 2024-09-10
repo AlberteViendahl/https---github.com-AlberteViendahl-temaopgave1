@@ -24,41 +24,36 @@ import "../styles/global.css";
 </div>
 
 <style>
-  .full-width {
-    display: flex;
-    > * {
-      grid-column: 2;
-    }
-
-    > ul {
-      scroll-snap-type: x mandatory;
-      grid-column: 1 / -1;
-      padding-inline: max(1rem, 50% - var(--content-width) / 2);
-      padding-block-end: 1rem;
-
-      li {
-        scroll-snap-align: center;
-      }
-    }
-  }
   div {
-    grid-column: content;
     display: grid;
-    grid-template-columns: subgrid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns:
+      [full-start] 1fr [content-start] minmax(0, 1100px)
+      [content-end] 1fr [full-end];
+    gap: 1rem;
 
     > * {
       grid-column: content;
     }
   }
 
+  .full-width {
+    grid-column: content;
+  }
+
   ul {
+    display: flex; /* Ændring til flex for vandret scrolling */
     gap: 1rem;
-    overflow-x: auto;
+    overflow-x: auto; /* Aktiverer vandret scrolling */
     list-style: none;
     background-color: var(--secondary01);
     height: 300px;
+    scroll-snap-type: x mandatory;
+    padding-inline: max(1rem, 50% - var(--content-width) / 2);
+    padding-block-end: 1rem;
 
     li {
+      flex: 0 0 auto; /* Forhindrer elementer i at ændre størrelse */
       flex-basis: min(400px, 90%);
       flex-shrink: 0;
       background: #ebebeb;
@@ -66,6 +61,7 @@ import "../styles/global.css";
       align-self: start;
       border-radius: 24px;
       padding: 40px;
+      scroll-snap-align: center; /* Snapper til center ved scrolling */
     }
   }
 

@@ -10,6 +10,9 @@ import Newsletter from "../componentes/Newsletter.astro";
 import Top from "../componentes/Top.astro";
 import Scroll from "../componentes/Scroll.astro";
 import { cardContent } from "../data/scroll-content.js";
+import Animation from "../componentes/Animation.astro";
+import Values from "../componentes/Values.astro";
+import ContactUs from "../componentes/ContactUs.astro";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/AlberteViendahl/frontend-design/main/resources/json/employees.json"
@@ -36,39 +39,51 @@ const employeeData = await fetch(
       </div>
     </div>
   </section>
-  <article>
-    <Scroll cardContent={cardContent} />
-  </article>
 
-  <style>
-    section {
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      grid-template-columns:
-        [full-start] 1fr [content-start] minmax(0, 1100px)
-        [content-end] 1fr [full-end];
-      gap: 1rlh;
+  <Scroll cardContent={cardContent} />
 
-      height: 600px;
-    }
-
-    .indhold {
-      grid-column: content;
-      display: grid;
-      grid-template-columns: subgrid;
-      display: inline-flex;
-      align-items: flex-start;
-
-      padding-top: 250px;
-      > * {
-        grid-column: 2;
-      }
-
-      img {
-        width: 450px;
-        border-radius: 24px;
-        padding: 20px;
-      }
-    }
-  </style>
+  <Animation />
+  <Values />
+  <ContactUs />
 </BaseLayout>
+<style>
+  section {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns:
+      [full-start] 1fr [content-start] minmax(0, 1100px)
+      [content-end] 1fr [full-end];
+    gap: 1rlh;
+
+    height: 600px;
+  }
+
+  article {
+    grid-column: content;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    > * {
+      grid-column: content;
+    }
+  }
+
+  .indhold {
+    grid-column: content;
+    display: grid;
+    grid-template-columns: subgrid;
+    display: inline-flex;
+    align-items: flex-start;
+
+    padding-top: 250px;
+    > * {
+      grid-column: 2;
+    }
+
+    img {
+      width: 450px;
+      border-radius: 24px;
+      padding: 20px;
+    }
+  }
+</style>
