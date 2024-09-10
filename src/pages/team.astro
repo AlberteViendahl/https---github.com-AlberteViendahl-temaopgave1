@@ -1,10 +1,11 @@
 ---
-import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import EmployeeSection from "../componentes/EmployeeSection.astro";
 import Popup from "../componentes/Popup.astro";
 import EmployeeCard from "../componentes/EmployeeCard.astro";
 import Newsletter from "../componentes/Newsletter.astro";
+import { Image } from "astro:assets";
+import image3 from "../assets/images/billede2.jpg";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/AlberteViendahl/frontend-design/main/resources/json/employees.json"
@@ -13,7 +14,7 @@ const employeeData = await fetch(
 
 <BaseLayout title="Home">
   <div class="body">
-    <img src="../billede2.jpg" alt="" />
+    <Image src={image3} alt="billede2" class="img" />
     <h1>Meet Our Great Team</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -60,6 +61,6 @@ const employeeData = await fetch(
   }
 
   img {
-    max-height: 200px;
+    max-height: 400px;
   }
 </style>

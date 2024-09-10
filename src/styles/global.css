@@ -8,14 +8,16 @@ html {
     line-height: 1.5;
 
     /*farver*/
-    --overskrift: #1C1C1C;
-    --bodytext: #595566;
+    --overskrift: rgb(28, 28, 28);
+    --bodytext: rgb(89, 85, 102);
     --primary01:#FFCC4A;
     --primary02:#4EAF4E;
-    --primary03: #181818;
+    --primary03: rgb(24, 24, 24);
     --secondary01:#F5F5F5;
     --secondary02:#FFFFFF;
-    --nav: #1b1b1be8;
+    --secondary03:rgba(38, 38, 38, 1);
+    --nav: rgba(28, 28, 28, 0.91);
+    
 
     /*skrift str*/
     --heading01: 50px;

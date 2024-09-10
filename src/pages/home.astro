@@ -1,13 +1,15 @@
 ---
+import "../styles/global.css";
 import { Image } from "astro:assets";
+import image2 from "../assets/images/billede4.jpg";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import EmployeeSection from "../componentes/EmployeeSection.astro";
 import Popup from "../componentes/Popup.astro";
 import EmployeeCard from "../componentes/EmployeeCard.astro";
 import Newsletter from "../componentes/Newsletter.astro";
 import Top from "../componentes/Top.astro";
-
-/* import fællesbillede2 from "../assets/images/fællesbillede2.jpg"; */
+import Scroll from "../componentes/Scroll.astro";
+import { cardContent } from "../data/scroll-content.js";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/AlberteViendahl/frontend-design/main/resources/json/employees.json"
@@ -16,6 +18,57 @@ const employeeData = await fetch(
 /* const firstThreeEmployees = employeeData.slice(0, 3); */
 ---
 
-<Top />
+<BaseLayout>
+  <Top />
+  <section>
+    <div class="indhold">
+      <div>
+        <Image src={image2} alt="billede4" class="img" />
+      </div>
+      <div>
+        <h2>What To Expect</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+    </div>
+  </section>
+  <article>
+    <Scroll cardContent={cardContent} />
+  </article>
 
-<style></style>
+  <style>
+    section {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns:
+        [full-start] 1fr [content-start] minmax(0, 1100px)
+        [content-end] 1fr [full-end];
+      gap: 1rlh;
+
+      height: 600px;
+    }
+
+    .indhold {
+      grid-column: content;
+      display: grid;
+      grid-template-columns: subgrid;
+      display: inline-flex;
+      align-items: flex-start;
+
+      padding-top: 250px;
+      > * {
+        grid-column: 2;
+      }
+
+      img {
+        width: 450px;
+        border-radius: 24px;
+        padding: 20px;
+      }
+    }
+  </style>
+</BaseLayout>
