@@ -1,0 +1,123 @@
+---
+import "../styles/global.css";
+---
+
+<section data-surface="tertiary">
+  <button>Growing with our Client</button>
+  <h2>Our core values & principles</h2>
+  <p class="text">
+    Capitalize on low hanging fruit to identify a ballpark value added activity
+    beta test. Override the digital divide with additional from DevOps.
+  </p>
+  <div class="grid">
+    <div class="card">
+      <img src="/src/icons/papirs.svg" alt="" />
+      <h3>Creative Ideas</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
+        accumsan augue Donec aliquam.
+      </p>
+      <strong>Read More -></strong>
+    </div>
+    <div class="card">
+      <img src="/src/icons/stiges.svg" alt="" />
+      <h3>Best Features</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <strong>Read More -></strong>
+    </div>
+    <div class="card">
+      <img src="/src/icons/verdens.svg" alt="" />
+      <h3>Experience</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget
+        accumsan augue Donec aliquam.
+      </p>
+      <strong>Read More -></strong>
+    </div>
+    <div class="card">
+      <img src="/src/icons/indstillingers.svg" alt="" />
+      <h3>Easy Solution</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <strong>Read More -></strong>
+    </div>
+  </div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns:
+      [full-start] 1fr [content-start] minmax(0, 1100px)
+      [content-end] 1fr [full-end];
+    gap: 1rlh;
+    background-color: var(--secondary01);
+
+    > * {
+      grid-column: content;
+    }
+  }
+
+  h2 {
+    color: var(--overskrift);
+    font-size: var(--heading02);
+  }
+
+  .text {
+    color: var(--overskrift);
+    padding-bottom: 50px;
+    max-width: 65ch;
+  }
+
+  h3 {
+    color: var(--overskrift);
+  }
+
+  p {
+    color: var(--overskrift);
+    padding-bottom: 10px;
+  }
+
+  @layer {
+    body {
+      font-family: system-ui, sans-serif;
+    }
+
+    h2,
+    h3 {
+      font: revert;
+      margin-block: 0 0.35em;
+    }
+
+    .grid {
+      display: grid;
+      grid: auto / repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .card {
+      padding: 20px 20px;
+      gap: 10px;
+      border-radius: 24px;
+      background-color: var(--secondary02);
+      margin-bottom: 100px;
+      height: fit-content;
+    }
+
+    img {
+      width: 52.778px;
+      height: 52.778px;
+      padding-bottom: 20px;
+    }
+  }
+
+  button {
+    background-color: var(--primary01);
+    border-radius: 24px;
+    max-width: 210px;
+    margin-top: 40px;
+    margin-bottom: -30px;
+  }
+</style>
+
+<!-- mangler: boksene skal ikke være ligr store + en hvid button, tjek også style -->

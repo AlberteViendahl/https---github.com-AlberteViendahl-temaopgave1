@@ -2,10 +2,12 @@
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
-import image1 from "../assets/images/billede1.jpg";
+import image1 from "../assets/images/billede3.jpg";
 import Idea from "../componentes/Idea.astro";
 import ValuesHvid from "../componentes/ValuesHvid.astro";
 import EmployeeSection from "../componentes/EmployeeSection.astro";
+import CaseS from "../componentes/CaseS.astro";
+import Faq from "../componentes/Faq.astro";
 
 const employeeData = await fetch(
   "https://raw.githubusercontent.com/AlberteViendahl/frontend-design/main/resources/json/employees.json"
@@ -14,46 +16,30 @@ const employeeData = await fetch(
 const firstThreeEmployees = employeeData.slice(0, 3);
 ---
 
-<BaseLayout title="Home">
+<BaseLayout>
   <Image class="imgs" src={image1} alt="Sarah" class="img" />
   <div class="box1">
-    <h1>Creative Services For Boost Your Business Growth</h1>
+    <h1>Taxes & Efficiency</h1>
   </div>
   <div class="grids">
-    <Idea />
-  </div>
-  <ValuesHvid />
-  <div class="grids">
-    <EmployeeSection data={firstThreeEmployees} />
+    <CaseS />
+    <Faq />
   </div>
 </BaseLayout>
-
 <style>
-  .grids {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns:
-      [full-start] 1fr [content-start] minmax(0, 1100px)
-      [content-end] 1fr [full-end];
-    gap: 1rlh;
-
-    > * {
-      grid-column: content;
-    }
-  }
-  .imgs {
-    position: relative;
-  }
-
+  /* Centrering af .box1 og .grids i BaseLayout */
   .box1 {
     position: absolute;
-    right: 30%;
-    top: 35%;
+    top: 30%; /* Position from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center by adjusting with 50% width */
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(5.5px);
     z-index: 1;
-    height: 250px;
+    height: 190px;
+    width: 500px;
     padding: 55px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -63,6 +49,20 @@ const firstThreeEmployees = employeeData.slice(0, 3);
   h1 {
     line-height: 1em;
     font-size: var(--heading01);
+    text-align: center; /* Center text inside h1 */
     width: 25ch;
+  }
+
+  .grids {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns:
+      [full-start] 1fr [content-start] minmax(0, 1100px)
+      [content-end] 1fr [full-end];
+    gap: 1rlh;
+
+    > * {
+      grid-column: content-start / content-end;
+    }
   }
 </style>

@@ -5,7 +5,7 @@ import "../styles/global.css";
 
 <div>
   <h1>Financial Projections</h1>
-  <p>
+  <p class="h">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -65,11 +65,55 @@ import "../styles/global.css";
     }
   }
 
+  ul li:hover {
+    background-color: var(--secondary03);
+    color: var(--secondary02);
+  }
   div {
     background-color: var(--secondary01);
+    margin-top: 50px;
   }
 
   h1 {
     padding-top: 100px;
+    font-size: var(--heading03);
+    font-family: "cabin";
+    margin-inline: left;
+    max-width: 100%;
+  }
+
+  p {
+    max-width: 65ch;
+    padding-top: 20px;
+    margin-inline: left;
+    font-family: "cabin";
+  }
+
+  h3 {
+    font-size: var(--heading07);
+    font-weight: bold;
+  }
+
+  /*   RESPONSIV */
+  @media (width < 900px) {
+    div {
+      display: revert;
+      margin-top: 380px;
+    }
+
+    h1 {
+      font-size: var(--heading06);
+      padding-left: 50px;
+    }
+  }
+
+  .h {
+    padding-left: 50px;
+
+    padding: min(3rem, 5%);
+    width: min(65ch, 100% - 2rem);
+    margin-inline: auto;
   }
 </style>
+
+<!-- Mangler: svg i toppen af box -->

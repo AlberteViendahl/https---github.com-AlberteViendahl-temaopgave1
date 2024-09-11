@@ -4,14 +4,14 @@ import { Image } from "astro:assets";
 import image1 from "../assets/images/sarah.jpg";
 ---
 
-<div class="top">
+<div class="top">t
   <div class="text1">
     <h1>Adam Buschemia Business Consultant</h1>
-    <p>
+    <p class="bp">
       Get help from Alex Moore, a professional business coach with advanced
       experience on growth and business scaling.
     </p>
-    <button type="button">Book a Meeting</button>
+    <button class="button" type="button">Book a Meeting</button>
   </div>
 
   <Image src={image1} alt="Sarah" class="img" />
@@ -92,8 +92,6 @@ import image1 from "../assets/images/sarah.jpg";
     align-items: center;
     gap: 10px;
     border-radius: 20px;
-
-    /*   flex: 1 0 0; */
   }
 
   .box3 {
@@ -109,14 +107,13 @@ import image1 from "../assets/images/sarah.jpg";
     align-items: center;
     gap: 10px;
     border-radius: 20px;
-
-    /*   flex: 1 0 0; */
   }
 
   h2 {
-    font-size: var(--heading06);
+    font-size: var(--heading07);
     color: var(--secondary02);
     padding-bottom: 10px;
+    font-weight: bold;
   }
 
   .p {
@@ -128,21 +125,28 @@ import image1 from "../assets/images/sarah.jpg";
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
-  
+    align-items: flex-start; 
+    position: relative; 
+    top: -100px; 
+    padding-left: 200px;
   }
 
   h1 {
     font-size: var(--heading01);
     color: var(--secondary02);
-    max-width: 20ch;
-    line-height: 1em;
+    max-width: 15ch;
+    line-height: 1.3em;
   }
 
   p {
     color: var(--secondary02);
-    max-width: 50ch;
+    max-width: 40ch;
     font-size: var(--footer);
+    text-align: left;
+  }
+
+  .bp{
+    margin-top: 20px;
   }
 
   img {
@@ -152,21 +156,39 @@ import image1 from "../assets/images/sarah.jpg";
 
   button {
     border-radius: 42px;
+    border: 1px solid #252121;
+    background: black;
+
+    display: flex;
+    padding: 14px 27px;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 10px;
+    margin-top: 21px;
+
+    color: aliceblue;
+    
+  }
+
+  .button {
+    border-radius: 42px;
     border: 1px solid #ebebeb;
     background: var(--secondary02);
 
     display: flex;
     padding: 16px 31px;
     flex-direction: column;
-    align-items: flex-start;
+    align-self: flex-start;
     gap: 10px;
+    margin-top: 35px;
+
+    color: #252121;
   }
 
-  @layer reset {
-    button {
-      background-color: var(--overskrift);
-    }
-  }
+/*   RESPONSIV */
+
+
+
 </style>
 
 <!-- mangler: at rette style:) + svg -->
