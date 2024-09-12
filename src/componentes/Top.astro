@@ -11,10 +11,17 @@ import image1 from "../assets/images/sarah.jpg";
       Get help from Alex Moore, a professional business coach with advanced
       experience on growth and business scaling.
     </p>
+    <div class="patteren">
+      <img src="../src/icons/pattern2.svg" alt="" />
+    </div>
+    <div class="patteren2">
+      <img src="../src/icons/pattern2.svg" alt="" />
+    </div>
     <button class="button" type="button">Book a Meeting</button>
   </div>
 
   <Image src={image1} alt="Sarah" class="img" />
+
 </div>
 <article>
   <div class="box1">
@@ -118,6 +125,7 @@ import image1 from "../assets/images/sarah.jpg";
 
   .p {
     max-width: 300px;
+    font-family: "lato";
   }
 
   .text1 {
@@ -131,10 +139,30 @@ import image1 from "../assets/images/sarah.jpg";
     padding-left: 200px;
   }
 
+  .patteren{
+  position: absolute;
+  z-index: 2;
+  left: -7rem;
+  top: 8rem;
+  width: 226px;
+  height: 285px;
+
+  }
+
+  .patteren2 {
+  position: absolute;
+  z-index: 1;
+  left: 40rem;
+  top: -10rem;
+  width: 226px;
+  height: 285px;
+  overflow: hidden;
+}
+
   h1 {
-    font-size: var(--heading01);
+    font-size: var(--heading02);
     color: var(--secondary02);
-    max-width: 15ch;
+    max-width: 18ch;
     line-height: 1.3em;
   }
 
@@ -152,6 +180,7 @@ import image1 from "../assets/images/sarah.jpg";
   img {
     flex-basis: 50%;center;
     background-size: cover; 
+    z-index: 1;
   }
 
   button {
@@ -185,6 +214,8 @@ import image1 from "../assets/images/sarah.jpg";
     color: #252121;
   }
 
+
+
 /*   RESPONSIV */
 
 @media (width < 900px) {
@@ -214,7 +245,29 @@ import image1 from "../assets/images/sarah.jpg";
 .top{
   height: 400px;
 }
+
+.patteren{
+  position: absolute;
+  z-index: 2;
+  left: 19rem;
+  top: 0rem;
+  width: 150px;
+  height: 180px;
+
+  }
+
+  .patteren2 {
+  position: absolute;
+  z-index: 1;
+  left: -13rem;
+  top: 15rem;
+  width: 150px;
+  height: 180px;
+  overflow: hidden;
 }
+}
+
+
 
 </style>
 
