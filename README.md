@@ -1,47 +1,17 @@
-# Astro Starter Kit: Minimal
+I starten af min kodeproces lavede jeg en plan over, hvordan jeg bedst muligt kunne komme i mål. Jeg startede med at danne et overblik over, hvilke komponenter jeg ville lave, hvorefter jeg lavede filer til dem i VS Code, så jeg visuelt kunne se, hvad jeg skulle lave.
 
-```sh
-npm create astro@latest -- --template minimal
-```
+Derefter begyndte jeg at lave mine variabler i min globale CSS. Da det var gjort, begyndte jeg slavisk at lave mine komponenter, og så snart de var lavet, puttede jeg dem ind på deres respektive side. Dette gjorde jeg, så jeg løbende kunne løse de konflikter, der kan opstå ved at putte flere komponenter ind på samme side. Dette fungerede rigtig godt for mig.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+En af de nye teknikker, jeg har brugt, er popover-funktionalitet i HTML. Ved hjælp af attributterne popovertarget og popover kan jeg få et element til at poppe frem, når jeg klikker på en knap, og forsvinde igen – alt sammen uden at bruge JavaScript.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Noget andet, jeg har brugt for første gang, er at kunne scrolle elementer ved hjælp af kun CSS. For at tillade vandret scrolling bruger jeg overflow-x: auto. Listen har ingen punkter (list-style: none), og baggrundsfarven er sat via en CSS-variabel. scroll-snap-type sørger for, at elementerne snapper på plads, og padding-inline justerer indrykket i forhold til indholdets bredde.
 
-## 🚀 Project Structure
+FAQ
+Her benytter jeg mig af elementet <summary>.
 
-Inside of your Astro project, you'll see the following folders and files:
+<summary>-elementet bruges til at give en kort, klikbar overskrift eller beskrivelse til et skjult indhold, der er inde i et <details>-element. Når brugeren klikker på <summary>, viser eller skjuler det indholdet, som typisk er pakket ind i <details>.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+Eftertanker
+Næste gang vil jeg gerne sætte mig mere ind i de nye koncepter og bruge dem så tidligt som muligt i opgaven, så jeg kan bruge dem gennem hele processen. Denne gang var jeg tidspresset og endte med at bruge de teknikker, jeg kendte. Så i stedet for at bruge container queries brugte jeg media queries.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Jeg synes også, det var rigtig svært at konvertere Figmas mål til VS Code. Ofte passede det ikke, og jeg endte med at gætte mig frem. Det vil jeg gerne sætte mig mere ind i til næste gang.
