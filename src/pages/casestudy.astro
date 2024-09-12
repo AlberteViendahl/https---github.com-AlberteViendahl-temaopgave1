@@ -19,6 +19,7 @@ const firstThreeEmployees = employeeData.slice(0, 3);
 <BaseLayout>
   <Image class="imgs" src={image1} alt="Sarah" class="img" />
   <div class="box1">
+    <button>CASE STUDIES SINGLE</button>
     <h1>Taxes & Efficiency</h1>
   </div>
   <div class="grids">
@@ -27,16 +28,15 @@ const firstThreeEmployees = employeeData.slice(0, 3);
   </div>
 </BaseLayout>
 <style>
-  /* Centrering af .box1 og .grids i BaseLayout */
   .box1 {
     position: absolute;
-    top: 30%; /* Position from the top */
-    left: 50%; /* Center horizontally */
+    top: 30%;
+    left: 40%; /* Center horizontally */
     transform: translateX(-50%); /* Center by adjusting with 50% width */
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(5.5px);
     z-index: 1;
-    height: 190px;
+    height: 150px;
     width: 500px;
     padding: 55px;
     display: flex;
@@ -53,6 +53,15 @@ const firstThreeEmployees = employeeData.slice(0, 3);
     width: 25ch;
   }
 
+  button {
+    background-color: var(--primary01);
+    border-radius: 24px;
+    width: 150px;
+    font-size: 12px;
+    margin-top: 10px;
+    align-self: flex-start;
+  }
+
   .grids {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -63,6 +72,41 @@ const firstThreeEmployees = employeeData.slice(0, 3);
 
     > * {
       grid-column: content-start / content-end;
+    }
+  }
+
+  /*     RESPSONSIV */
+  @media (width < 900px) {
+    .box1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      right: 13%;
+      top: 25%;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(5.5px);
+      z-index: 1;
+      height: 90px;
+      width: 400px;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: var(--heading06);
+      width: 18ch;
+      line-height: 1em;
+      text-align: left;
+    }
+
+    button {
+      background-color: var(--primary01);
+      border-radius: 24px;
+      width: 150px;
+      font-size: 12px;
+      margin-top: 10px;
+      align-self: flex-start;
     }
   }
 </style>

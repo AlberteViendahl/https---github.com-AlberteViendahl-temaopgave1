@@ -15,6 +15,11 @@ const employeeData = await fetch(
 <BaseLayout title="Home">
   <div class="body">
     <Image src={image3} alt="billede2" class="img" />
+    <div class="box1">
+      <button>TEAM</button>
+      <h2>The Consulors</h2>
+    </div>
+
     <h1>Meet Our Great Team</h1>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -25,42 +30,104 @@ const employeeData = await fetch(
       <EmployeeSection data={employeeData} theme="dark" />
     </div>
   </div>
-</BaseLayout>
 
-<style>
-  .body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-columns: [full-start] 1fr [content-start] minmax(0, 1100px) [content-end] 1fr [full-end];
-    gap: 1rlh;
-  }
+  <style>
+    .body {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: [full-start] 1fr [content-start] minmax(0, 1100px) [content-end] 1fr [full-end];
+      gap: 1rlh;
+    }
 
-  img {
-    grid-column: full;
-    display: grid;
-    grid-template-columns: subgrid;
-
-    > * {
+    img {
       grid-column: full;
-    }
-  }
-  .card,
-  h1,
-  p {
-    grid-column: content;
-    display: grid;
-    grid-template-columns: subgrid;
+      display: grid;
+      grid-template-columns: subgrid;
 
-    > * {
+      > * {
+        grid-column: full;
+      }
+    }
+    .card,
+    h1,
+    p {
       grid-column: content;
+      display: grid;
+      grid-template-columns: subgrid;
+
+      > * {
+        grid-column: content;
+      }
     }
-  }
 
-  p {
-    max-width: 230px;
-  }
+    p {
+      max-width: 230px;
+    }
 
-  img {
-    max-height: 400px;
-  }
-</style>
+    img {
+      max-height: 400px;
+    }
+
+    .box1 {
+      position: absolute;
+      right: 57%;
+      top: 28%;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(5.5px);
+      z-index: 1;
+      height: 150px;
+      padding: 45px;
+      width: 380px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 20px;
+    }
+
+    button {
+      background-color: var(--primary01);
+      border-radius: 24px;
+      width: 70px;
+    }
+
+    h2 {
+      font-family: "cabin";
+      font-size: var(--heading03);
+    }
+
+    /*     RESPSONSIV */
+    @media (width < 900px) {
+      .box1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        right: 13%;
+        top: 25%;
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(5.5px);
+        z-index: 1;
+        height: 90px;
+        width: auto;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      h2 {
+        font-size: var(--heading06);
+        width: 18ch;
+        line-height: 1em;
+        text-align: left;
+      }
+
+      button {
+        background-color: var(--primary01);
+        border-radius: 24px;
+        width: 80px;
+        font-size: 12px;
+        margin-top: 10px;
+        align-self: flex-start;
+      }
+    }
+  </style>
+</BaseLayout>

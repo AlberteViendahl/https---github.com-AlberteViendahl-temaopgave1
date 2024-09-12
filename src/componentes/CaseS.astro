@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { Image } from "astro:assets";
 import image11 from "../assets/images/computer.jpg";
 import image5 from "../assets/images/billede5.jpg";
+import Button from "../componentes/Button.astro";
 ---
 
 <section>
@@ -21,7 +22,7 @@ import image5 from "../assets/images/billede5.jpg";
       <p class="h">27th September 2022</p>
     </div>
     <div class="h">
-      <button></button>
+      <Button class="knap" text="Live Preview" />
     </div>
   </div>
 
@@ -168,6 +169,7 @@ import image5 from "../assets/images/billede5.jpg";
 
   article h3 {
     font-size: var(--heading06);
+    font-weight: bold;
   }
 
   .img2 {

@@ -17,6 +17,7 @@ const firstThreeEmployees = employeeData.slice(0, 3);
 <BaseLayout title="Home">
   <Image class="imgs" src={image1} alt="Sarah" class="img" />
   <div class="box1">
+    <button>SERVICES</button>
     <h1>Creative Services For Boost Your Business Growth</h1>
   </div>
   <div class="grids">
@@ -52,8 +53,8 @@ const firstThreeEmployees = employeeData.slice(0, 3);
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(5.5px);
     z-index: 1;
-    height: 250px;
-    padding: 55px;
+    height: 200px;
+    padding: 45px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -63,6 +64,48 @@ const firstThreeEmployees = employeeData.slice(0, 3);
   h1 {
     line-height: 1em;
     font-size: var(--heading01);
-    width: 25ch;
+    width: 18ch;
+  }
+
+  button {
+    background-color: var(--primary01);
+    border-radius: 24px;
+    width: 90px;
+  }
+
+  /*   RESPSONSIV: */
+
+  @media (width < 900px) {
+    .box1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      right: 13%;
+      top: 30%;
+      background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(5.5px);
+      z-index: 1;
+      height: 90px;
+      width: auto;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: var(--heading06);
+      width: 18ch;
+      line-height: 1em;
+      text-align: left;
+    }
+
+    button {
+      background-color: var(--primary01);
+      border-radius: 24px;
+      width: 80px;
+      font-size: 12px;
+      margin-top: 10px;
+      align-self: flex-start;
+    }
   }
 </style>
