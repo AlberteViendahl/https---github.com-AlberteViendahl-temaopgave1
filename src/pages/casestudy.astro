@@ -3,23 +3,14 @@ import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import image1 from "../assets/images/billede3.jpg";
-import Idea from "../componentes/Idea.astro";
-import ValuesHvid from "../componentes/ValuesHvid.astro";
-import EmployeeSection from "../componentes/EmployeeSection.astro";
 import CaseS from "../componentes/CaseS.astro";
 import Faq from "../componentes/Faq.astro";
-
-const employeeData = await fetch(
-  "https://raw.githubusercontent.com/AlberteViendahl/frontend-design/main/resources/json/employees.json"
-).then((res) => res.json());
-
-const firstThreeEmployees = employeeData.slice(0, 3);
 ---
 
 <BaseLayout>
   <Image class="imgs" src={image1} alt="Sarah" class="img" />
   <div class="box1">
-    <button>CASE STUDIES SINGLE</button>
+    <button class="knap">CASE STUDIES SINGLE</button>
     <h1>Taxes & Efficiency</h1>
   </div>
   <div class="grids">
@@ -31,8 +22,8 @@ const firstThreeEmployees = employeeData.slice(0, 3);
   .box1 {
     position: absolute;
     top: 30%;
-    left: 40%; /* Center horizontally */
-    transform: translateX(-50%); /* Center by adjusting with 50% width */
+    left: 40%;
+    transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(5.5px);
     z-index: 1;
@@ -49,17 +40,21 @@ const firstThreeEmployees = employeeData.slice(0, 3);
   h1 {
     line-height: 1em;
     font-size: var(--heading01);
-    text-align: center; /* Center text inside h1 */
+    text-align: center;
     width: 25ch;
   }
 
-  button {
+  .knap {
     background-color: var(--primary01);
     border-radius: 24px;
-    width: 150px;
+    width: 230px;
     font-size: 12px;
     margin-top: 10px;
     align-self: flex-start;
+    font-size: var(--footer);
+    font-family: "lato";
+    letter-spacing: 2.32px;
+    margin-bottom: 20px;
   }
 
   .grids {

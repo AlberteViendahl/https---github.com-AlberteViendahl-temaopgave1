@@ -45,12 +45,6 @@ import "../styles/global.css";
 </body>
 
 <style>
-  /*  @property --percent {
-    syntax: "<percentage>";
-    inherits: true;
-    initial-value: 0%;
-  } */
-
   .parent-wrapper {
     display: flex;
     flex-direction: column;
@@ -85,42 +79,6 @@ import "../styles/global.css";
       offset-anchor: 50% calc(50% - var(--offset-pos) / 2);
     }
   }
-  /* 
-  @keyframes pie1 {
-    0% {
-      --percent: 0%;
-    }
-    70% {
-      --percent: 85%;
-    }
-    100% {
-      --percent: 85%;
-    }
-  }
-
-  @keyframes pie2 {
-    0% {
-      --percent: 0%;
-    }
-    70% {
-      --percent: 95%;
-    }
-    100% {
-      --percent: 95%;
-    }
-  }
-
-  @keyframes pie3 {
-    0% {
-      --percent: 0%;
-    }
-    70% {
-      --percent: 90%;
-    }
-    100% {
-      --percent: 90%;
-    }
-  } */
 
   button {
     background-color: var(--secondary02);
@@ -158,8 +116,8 @@ import "../styles/global.css";
   }
 
   h1 {
-    color: var(--h1);
-    font-family: "Lato";
+    color: var(--overskrift);
+    font-family: "cabin";
     font-size: 16px;
     letter-spacing: 2.32px;
     text-transform: uppercase;
@@ -171,16 +129,17 @@ import "../styles/global.css";
   }
 
   h2 {
-    color: var(--h1);
+    color: var(--overskrift);
     font-family: "Cabin";
     font-size: 45px;
-    font-weight: 700;
+    font-weight: bold;
+    font-size: var(--heading04);
   }
 
   p {
-    color: var(--h1);
+    color: var(--overskrift);
     font-family: "Lato";
-    font-size: 18px;
+    font-size: var(--footer);
   }
 
   .flexcolumn {
@@ -191,7 +150,7 @@ import "../styles/global.css";
 
   .circle-text {
     margin: 25% 0% 0% 0%;
-    color: var(--h1);
+    color: var(--overskrift);
     font-family: "Cabin";
     font-size: 25px;
     font-weight: 600;
@@ -220,5 +179,3 @@ import "../styles/global.css";
     }
   }
 </style>
-
-<!-- Mangler: skal bytte rundt i tingene -->
