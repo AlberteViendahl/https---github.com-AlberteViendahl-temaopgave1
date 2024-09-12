@@ -48,9 +48,9 @@ import "../styles/global.css";
   }
 
   ul {
-    display: flex; /* Ændring til flex for vandret scrolling */
+    display: flex;
     gap: 1rem;
-    overflow-x: auto; /* Aktiverer vandret scrolling */
+    overflow-x: auto;
     list-style: none;
     background-color: var(--secondary01);
     height: 300px;
@@ -59,7 +59,7 @@ import "../styles/global.css";
     padding-block-end: 1rem;
 
     li {
-      flex: 0 0 auto; /* Forhindrer elementer i at ændre størrelse */
+      flex: 0 0 auto;
       flex-basis: min(400px, 90%);
       flex-shrink: 0;
       background: #ebebeb;
@@ -67,7 +67,7 @@ import "../styles/global.css";
       align-self: start;
       border-radius: 24px;
       padding: 40px;
-      scroll-snap-align: center; /* Snapper til center ved scrolling */
+      scroll-snap-align: center;
     }
   }
 

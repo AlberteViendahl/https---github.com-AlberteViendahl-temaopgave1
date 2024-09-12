@@ -59,7 +59,7 @@ import image7 from "../assets/images/todamer.jpg";
 </section>
 
 <style>
-  /* Grid layout for section */
+
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -67,23 +67,25 @@ import image7 from "../assets/images/todamer.jpg";
 
   section {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Split into two columns */
+    grid-template-columns: 
     gap: 2rem;
     height: 600px;
-    padding: 15px; /* Add padding to the section */
+    padding: 15px; 
   }
 
   .contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 115px; /* Increased padding-left */
+    padding-left: 115px; 
   }
 
   h1 {
     font-size: var(--heading02);
     margin-bottom: 50px;
     margin-top: 25px;
+    font-family: "cabin";
+    color: var(--overskift);
   }
 
   button {
@@ -94,30 +96,39 @@ import image7 from "../assets/images/todamer.jpg";
   }
 
   p {
-    max-width: 40ch;
+    max-width: 55ch;
     margin-bottom: 20px;
+    font-family: "lato";
+    font-size: var(--footer);
+    color: var(--overskift);
   }
 
   dl {
     margin-top: 20px;
+    font-family: "lato";
+    font-size: var(--footer);
+    color: var(--overskift);
   }
 
   dd {
     padding-bottom: 15px;
+    font-family: "cabin";
+    font-size: 20px;
+    color: var(--overskift);
   }
 
-  /* Layout for the contact info and SVG alignment */
+  
   .contact-info {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 10px; /* Adjust spacing between items */
+    row-gap: 10px; 
   }
 
   .info-item {
     display: grid;
-    grid-template-columns: auto 1fr; /* SVG and text in two columns */
+    grid-template-columns: auto 1fr; 
     align-items: center;
-    gap: 5px; /* 5px gap between SVG and text */
+    gap: 5px; 
   }
 
   .svg {
@@ -125,13 +136,13 @@ import image7 from "../assets/images/todamer.jpg";
     height: auto;
   }
 
-  /* Layout for the images section */
+ 
   .images {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns for images */
-    align-items: center; /* Align vertically */
+    grid-template-columns: 1fr 1fr; 
+    align-items: center; 
     gap: 2rem;
-    padding-right: 115px; /* Increased padding-right */
+    padding-right: 115px; 
   }
 
   .img1 {

@@ -1,7 +1,7 @@
 ---
+import "../styles/global.css";
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
-import Button from "../componentes/Button.astro";
 
 const { employee } = Astro.props;
 const { img, name, title, description } = employee;
@@ -97,6 +97,15 @@ if (!images[img])
     margin-top: 25px;
     font-size: var(--heading05);
     color: var(--primary03);
+    font-family: "cabin";
+    font-weight: bold;
+    margin-bottom: 17px;
+  }
+
+  p {
+    font-size: var(--footer);
+    text-align: center;
+    font-family: "lato";
   }
 
   h3 {
@@ -107,8 +116,9 @@ if (!images[img])
     padding: 4px 21px;
     z-index: 1;
     border-radius: 20px;
-    color: white;
+    color: var(--secondary02);
     cursor: pointer;
+    font-family: "cabin";
   }
 
   img {
