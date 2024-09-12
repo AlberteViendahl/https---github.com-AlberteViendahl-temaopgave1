@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { Image } from "astro:assets";
 import image11 from "../assets/images/computer.jpg";
+import image5 from "../assets/images/billede5.jpg";
 ---
 
 <section>
@@ -71,7 +72,7 @@ import image11 from "../assets/images/computer.jpg";
       scalable customer service.
     </p>
 
-    <img src="" alt="" />
+    <Image class="img2" src={image5} alt="2 piger" />
   </article>
 
   <article>
@@ -109,10 +110,11 @@ import image11 from "../assets/images/computer.jpg";
   .h {
     color: aliceblue;
     padding-left: 5px;
+    gap: 7rem;
   }
 
   .img {
-    max-width: 800px;
+    max-width: 900px;
     border-radius: 24px;
     margin-bottom: 20px; /* Add space below the image */
     position: relative;
@@ -120,22 +122,23 @@ import image11 from "../assets/images/computer.jpg";
 
   .box {
     position: absolute;
-    right: 26%;
-    bottom: -7rem;
+    right: 22%;
+    bottom: -10rem;
     background-color: var(--overskrift);
     z-index: 1;
-    width: 700px;
+    width: 800px;
     display: flex;
     align-items: flex-start;
     border-radius: 20px;
     padding: 7px;
+    height: 100px;
   }
 
   article {
-    max-width: 800px; /* Ensure articles are not too wide */
-    text-align: center; /* Center text within articles */
+    max-width: 700px;
+    text-align: center;
     padding: 20px;
-    margin-bottom: 20px; /* Add space between articles */
+    margin-bottom: 20px;
   }
 
   h2,
@@ -148,11 +151,26 @@ import image11 from "../assets/images/computer.jpg";
     color: rgb(0, 0, 0);
     margin-top: 1rem; /* Adjust spacing between paragraphs and headings */
     text-align: left;
+    font-family: "lato";
   }
 
   img {
     max-width: 100%; /* Ensure images are responsive */
     height: auto;
     margin: 20px auto; /* Center images and add margin */
+  }
+
+  article h2 {
+    font-size: var(--heading05);
+    font-weight: bold;
+    padding-top: 20px;
+  }
+
+  article h3 {
+    font-size: var(--heading06);
+  }
+
+  .img2 {
+    width: 500px;
   }
 </style>

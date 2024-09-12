@@ -29,5 +29,10 @@ const { data, theme = "light" } = Astro.props;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 3rem;
     }
+    @media (width < 900px) {
+      section {
+        display: block;
+      }
+    }
   }
 </style>

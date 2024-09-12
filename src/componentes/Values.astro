@@ -118,6 +118,38 @@ import "../styles/global.css";
     margin-top: 40px;
     margin-bottom: -30px;
   }
+
+  /*   RESPONSIV */
+
+  @media (width < 900px) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    h2 {
+      font-size: var(--heading06);
+      padding-top: 20px;
+      padding-left: 50px;
+    }
+
+    .card {
+      gap: 10px;
+      border-radius: 24px;
+      background-color: var(--secondary01);
+      height: fit-content;
+      max-width: 300px;
+    }
+
+    .text {
+      max-width: 40ch;
+      padding-left: 50px;
+    }
+
+    button {
+      margin-left: 50px;
+    }
+  }
 </style>
 
-<!-- mangler: boksene skal ikke være ligr store + en hvid button, tjek også style -->
+<!-- mangler: en hvid button, tjek også style -->

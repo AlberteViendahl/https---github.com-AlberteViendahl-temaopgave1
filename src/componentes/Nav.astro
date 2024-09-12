@@ -54,4 +54,19 @@ import Popup from "../componentes/Popup.astro";
     align-items: center;
     color: var(--primary03);
   }
+
+  @media (width < 900px) {
+    h1 {
+      font-size: var(--heading07);
+    }
+
+    .grid {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    li {
+      padding: 7px;
+    }
+  }
 </style>

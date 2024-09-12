@@ -71,4 +71,27 @@ import Button from "../componentes/Button.astro";
     margin: 15px;
     color: var(--bodytext);
   }
+
+  @media (width < 900px) {
+    .newsletter {
+      display: revert;
+    }
+
+    .newsletter::before {
+      content: "";
+      position: absolute;
+      right: -7rem;
+      top: 11rem;
+      background: green;
+      width: 180px;
+      height: 180px;
+      transform: rotate(135deg);
+      z-index: 1;
+      border-radius: 20px;
+    }
+
+    h1 {
+      font-size: var(--heading07);
+    }
+  }
 </style>

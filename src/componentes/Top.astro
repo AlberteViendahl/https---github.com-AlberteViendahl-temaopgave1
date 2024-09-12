@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import image1 from "../assets/images/sarah.jpg";
 ---
 
-<div class="top">t
+<div class="top">
   <div class="text1">
     <h1>Adam Buschemia Business Consultant</h1>
     <p class="bp">
@@ -187,7 +187,34 @@ import image1 from "../assets/images/sarah.jpg";
 
 /*   RESPONSIV */
 
+@media (width < 900px) {
+  .box1, .box2, .box3 {
+    display: none;
+  }
 
+  h1{
+    font-size: var(--heading05);
+   
+  }
+
+.img{
+  display: none;
+}
+
+.text1{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; 
+    position: relative;
+    padding-left: 0;
+    padding-top: 30%;
+}
+
+.top{
+  height: 400px;
+}
+}
 
 </style>
 
